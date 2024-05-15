@@ -30,7 +30,7 @@ export default function Profile() {
   const handleLogout = async () => {
     try {
       await auth.signOut();
-      window.location.href = "/login";
+      window.location.href = "/";
     } catch (error) {
       console.log("Error logging out:", error.message);
     }

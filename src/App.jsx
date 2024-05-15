@@ -9,7 +9,6 @@ import Login from "./pages/Login/Login";
 import Homepage from "./pages/Homepage/Homepage";
 import Profile from "./pages/UserProfile/UserProfile";
 import Chatbot from "./pages/Chatbot/Chatbot";
-import Footer from "./components/Footer/Footer";
 import Reservation from "./pages/Reservation.jsx/Reservation";
 
 function App() {
@@ -20,14 +19,13 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/register" element={<Register />} />
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/reservation/:id" element={<Reservation />} />
-          <Route path="/footer" element={<Footer />} />
         </Routes>
         <ToastContainer />
       </div>

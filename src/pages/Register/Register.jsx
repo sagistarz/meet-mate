@@ -111,7 +111,7 @@ export default function Register() {
             <p className="text-center font-semibold p-4">
               Have an account?{" "}
               <span>
-                <Link to="/login" style={{ color: "#0F3DDE" }}>
+                <Link to="/" style={{ color: "#0F3DDE" }}>
                   Login
                 </Link>
               </span>
