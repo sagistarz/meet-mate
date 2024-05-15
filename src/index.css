@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.images img {
+  width: auto;
+  margin: 0px 50px 50px 50px;
+}
+
+.images.flex.flex-row.justify-center {
+  max-width: calc(5 * (100% - 10px));
+}
+
+.answer-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.form-control {
+  border: 1px solid #d1d5db;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.input:focus {
+  border-color: #4a90e2;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #357bd8;
+}
+
+.reservation-item {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-edit {
+  background-color: #34d399;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background-color: #10b981;
+}
+
+.btn-delete {
+  background-color: #f87171;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #ef4444;
+}
+
+.homepage-text {
+  text-align: center;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.homepage-text h1{
+  font-size: 32px;
+  font-weight: bold;
+  color: white; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.homepage-text p{
+  font-size: 20px;
+  color: white; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
