@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
@@ -14,7 +14,7 @@ function App() {
   // const [reservations, setReservations] = useState([]);
 
   return (
-    <Router>
+    <BrowserRouter>
       <div>
         <Routes>
           <Route path="/" element={<Login />} />
@@ -28,7 +28,7 @@ function App() {
         </Routes>
         <ToastContainer />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
