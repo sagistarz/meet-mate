@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -12,7 +11,7 @@ import Chatbot from "./pages/Chatbot/Chatbot";
 import Reservation from "./pages/Reservation.jsx/Reservation";
 
 function App() {
-  const [reservations, setReservations] = useState([]);
+  // const [reservations, setReservations] = useState([]);
 
   return (
     <Router>

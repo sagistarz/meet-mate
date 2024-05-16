@@ -28,18 +28,6 @@ export default function Reservation() {
   const auth = getAuth();
   const user = auth.currentUser;
 
-  // useEffect(() => {
-  //   const fetchReservations = async () => {
-  //     try {
-  //       const q = searchEmail ? query(collection(db, "reservation"), where("email", "==", searchEmail)) : collection(db, "reservation");
-  //       const querySnapshot = await getDocs(q);
-  //       setReservations(querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-  //     } catch (error) {
-  //       console.error("Error fetching reservations:", error);
-  //     }
-  //   };
-  //   fetchReservations();
-  // }, [searchEmail]);
   useEffect(() => {
     const fetchData = async () => {
       const q = query(collection(db, "reservation"), where("email", "==", user.email));
@@ -177,20 +165,10 @@ export default function Reservation() {
             </form>
           </div>
         </div>
+
         <div className="container mx-auto mt-10">
           <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <h2 className="text-2xl font-bold mb-4">Reservations</h2>
-            {/* <div className="mb-4">
-              <label htmlFor="searchEmail" className="block text-gray-700 text-sm font-bold mb-2">
-                Search your reservation
-              </label>
-              <div className="flex items-center">
-                <input type="email" name="searchEmail" id="searchEmail" value={searchEmail} onChange={(e) => setSearchEmail(e.target.value)} placeholder="Enter your email" className="input input-bordered w-full h-10" />
-                <button type="button" onClick={() => setSearchEmail("")} className="btn bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded ml-2 flex items-center">
-                  Clear
-                </button>
-              </div>
-            </div> */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {reservations.map((reservation) => (
                 <div key={reservation.id} className="max-w-xs w-full">
